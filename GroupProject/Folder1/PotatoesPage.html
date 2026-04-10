@@ -1,68 +1,225 @@
 <html>
 	<style>
 		* {
-		margin: 0;
-		padding: 0;
-		text-decoration: none;
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
 		}
 		
 		nav {
-		display: flex;
-		height: 100px;
-		justify-content: space-between;
-		background-color: #99602E;
+			display: flex;
+			height: 100px;
+			justify-content: space-between;
+			background-color: #99602E;
+		}
+		
+		.sidebar {
+			display: flex;
+			width: 240px;
+			min-height: 100vh;
+			padding: 20px;
+			background-color: #cdb891;
+			flex-shrink: 0;
+		}
+		
+		.footer {
+			background-color: #99602E;
+			color: darkslategray;
+			font-size: 15px;
+			text-align: center;
+			padding: 20px 0;
+		}
+			
+		.footer ul {
+			display: flex;
+			justify-content: center;
+			padding: 0 40px;
+			list-style: none;
+			align-items: center;
+		}
+		
+		.footer ul li:nth-child(2) {
+			margin-left: auto;
+		}
+		
+		.main {
+			text-align: center;
+			flex: 1;
+			padding: 40px;
+			background-color: #F5F5DC;
+		}
+		
+		.content-area {
+			display: flex;
+			align-items: stretch;
 		}
 		
 		body {
-		background-color: #D3D3D3;
+			background-color: #D3D3D3;
 		}
 		
-		.wrapper-main {
-		margin: 0 auto;
-		width: 1000px;
+		.wrapper {
+			margin: 0 auto;
+			width: 1200px;
+			background-color: #fff;
 		}
 		
-		ul {
-		display: flex;
-		width: 100%;
-		align-items: center;
-		list-style: none;
+		nav ul {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			list-style: none;
 		}
 
-		ul li:nth-child(2) {
-		margin-left: auto;
+		nav ul li:nth-child(2) {
+			margin-left: auto;
 		}
 
-		ul li a {
-		font-size: 20px;
-		color: darkslategray;
-		padding: 0 20px;
+		nav ul li a {
+			font-size: 20px;
+			color: darkslategray;
+			padding: 0 20px;
 		}
 		
-		ul li a:hover {
-		color: rgb(139, 0, 0);
+		nav ul li a:hover {
+			color: rgb(139, 0, 0);
 		}
 
-		ul li b {
-		font-size: 30px;
-		color: black;
-		padding-left: 20px;
+		nav ul li b {
+			font-size: 30px;
+			color: black;
+			padding-left: 20px;
 		}
+		
+		
+		.dropdown button {
+			background-color: brown;
+			color: darkslategray;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+		
+		.dropdown a {
+			display: block;
+			color: darkslategray;
+			padding: 10px 15px;
+		}
+		
+		.dropdown .content {
+			display: none;
+		}
+		
+		.dropdown:hover .content {
+			display: block;
+		}
+		
+		.dropdown:hover button {
+			background-color: gray;
+		}
+		
+		.dropdown a:hover {
+			background-color: gray;
+			color: rgb(139, 0, 25);
+		}
+		.hidden-box {
+			display: none; 
+		}
+		
+		.hidden-box:target {
+			display: block; 
+		}
+		
+		.hidden-box img {
+			width: 350px;
+			height auto;
+		}
+		
 	</style>
-	
 	<body>
-		<nav>
-			<img src="../Images/logo.png" alt="potato logo">
-			<ul>
-				<li><b>Website Name Goes here</b></li>
-				<li><a href="HomePage.html">Home</a></li>
-				<li><a href="PotatoesPage.html">Types of Potatoes</a></li>
-				<li><a href="AboutUsPage.html">About Us</a></li>
-				<li><a href="ContactPage.html">Contact Information</a></li>
-			</ul>
-		</nav>
-		<div class="wrapper-main">
-			<h1>Potatoes Page</h1>
+		<div class="wrapper">
+			<nav>
+				<img src="../Images/logo.png" alt="potato logo">
+				<ul>
+					<li><b>Website Name Goes here</b></li>
+					<li><a href="HomePage.html">Home</a></li>
+					<li><a href="PotatoesPage.html">Varieties of Potatoes</a></li>
+					<li><a href="AboutUsPage.html">About Us</a></li>
+					<li><a href="ContactPage.html">Contact Information</a></li>
+				</ul>
+			</nav>
+			<div class="content-area">
+				<div class="sidebar">
+					<div class="dropdown">
+						<button>Types of Potatoes</button>
+						<div class="content">
+							<a href="#reveal-1">Baking Potato</a>
+							<a href="#reveal-2">Yukon Gold Potato</a>
+							<a href="#reveal-3">Sweet Potato</a>
+							<a href="#reveal-4">Russet Potato</a>
+							<a href="#reveal-5">White Potato</a>
+							<a href="#reveal-6">Russian Banana Potato</a>
+							<a href="#reveal-7">German Butterball Potato</a>
+							<a href="#reveal-8">Kennebec Potato</a>
+							<a href="#reveal-9">Purple Majesty Potato</a>
+							<a href="#reveal-10">Red Thumb Potato</a>
+						</div>
+					</div>
+				</div>
+				<div class="main">
+					<h1>Choose a Potato in the dropdown list to see information about it!</h1>
+					<br>
+					<br>
+					<div id="reveal-1" class="hidden-box">
+						<img src="../Images/BakingPotato.jpg">
+						<p>Baking Potato info goes here</p>
+					</div>
+					<div id="reveal-2" class="hidden-box">
+						<img src="../Images/YukonGoldPotato.jpg">
+						<p>Yukon Gold Potato info goes here</p>
+					</div>
+					<div id="reveal-3" class="hidden-box">
+						<img src="../Images/SweetPotato.jpg">
+						<p>Sweet Potato info goes here</p>
+					</div>
+					<div id="reveal-4" class="hidden-box">
+						<img src="../Images/RussetPotato.jpg">
+						<p>Russet Potato info goes here</p>
+					</div>
+					<div id="reveal-5" class="hidden-box">
+						<img src="../Images/WhitePotato.jpg">
+						<p>White Potato info goes here</p>
+					</div>
+					<div id="reveal-6" class="hidden-box">
+						<img src="../Images/RussianBananaPotato.jpg">
+						<p>Russian Banana Potato info goes here</p>
+					</div>
+					<div id="reveal-7" class="hidden-box">
+						<img src="../Images/GermanButterballPotato.jpg">
+						<p>German Butterball Potato info goes here</p>
+					</div>
+					<div id="reveal-8" class="hidden-box">
+						<img src="../Images/KennebecPotato.jpg">
+						<p>Kennebec Potato info goes here</p>
+					</div>
+					<div id="reveal-9" class="hidden-box">
+						<img src="../Images/PurpleMajestyPotato.jpg">
+						<p>Purple Majesty Potato info goes here</p>
+					</div>
+					<div id="reveal-10" class="hidden-box">
+						<img src="../Images/RedThumbPotato.jpg">
+						<p>Red Thumb Potato info goes here</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="footer">
+				<ul>
+					<li>© 2024 company name goes here. All rights reserved.</li>
+					<li><a href="">Terms of Service</a></li>
+					<li> | </li>
+					<li><a href="">Privacy Policy</a></li>
+				</ul>
+			</div>
 		</div>
 	</body>
 </html>
