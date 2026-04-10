@@ -13,84 +13,112 @@
 			background-color: #99602E;
 		}
 		
-		body {
-			background-color: #D3D3D3;
-			background-image: linear-gradient(rgba(128, 128, 128,25%), rgba(128,128,128,20%)), url(../images/field.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
+		.sidebar {
+			display: flex;
+			width: 240px;
+			min-height: 100vh;
+			padding: 20px;
+			background-color: #cdb891;
+			flex-shrink: 0;
 		}
 		
-		.text-container {
+		.footer {
+			background-color: #99602E;
+			color: darkslategray;
+			font-size: 15px;
+			text-align: center;
+			padding: 20px 0;
+		}
+			
+		.footer ul {
 			display: flex;
 			justify-content: center;
+			padding: 0 40px;
+			list-style: none;
 			align-items: center;
-			height: 100vh;  
 		}
 		
-		.text {
-			margin-bottom: 55%;
-			font-size: 30px;
-			font-family: arial;
-			color: black;
-			font-weight: bold;
-			text-shadow: 
-			1px 1px 0px #919191,
-			2px 2px 0px #919191,
-			3px 3px 0px #919191,
-			4px 4px 0px #919191,
-			5px 5px 10px rgba(0,0,0,0.4);
+		.footer ul li:nth-child(2) {
+			margin-left: auto;
 		}
 		
-		.wrapper-main {
+		.main {
+			flex: 1;
+			padding: 40px;
+			background-color: #F5F5DC;
+		}
+		
+		.content-area {
+			display: flex;
+			align-items: stretch;
+		}
+		
+		body {
+			background-color: #D3D3D3;
+		}
+		
+		.wrapper {
 			margin: 0 auto;
-			width: 1000px;
+			width: 1200px;
+			background-color: #fff;
 		}
 		
-		ul {
+		nav ul {
 			display: flex;
 			width: 100%;
 			align-items: center;
 			list-style: none;
 		}
 
-		ul li:nth-child(2) {
+		nav ul li:nth-child(2) {
 			margin-left: auto;
 		}
 
-		ul li a {
+		nav ul li a {
 			font-size: 20px;
 			color: darkslategray;
 			padding: 0 20px;
 		}
 		
-		ul li a:hover {
+		nav ul li a:hover {
 			color: rgb(139, 0, 0);
 		}
 
-		ul li b {
+		nav ul li b {
 			font-size: 30px;
 			color: black;
 			padding-left: 20px;
 		}
+		
 	</style>
-	
 	<body>
-		<nav>
-			<img src="../Images/logo.png" alt="potato logo">
-			<ul>
-				<li><b>Website Name Goes here</b></li>
-				<li><a href="HomePage.html">Home</a></li>
-				<li><a href="PotatoesPage.html">Types of Potatoes</a></li>
-				<li><a href="AboutUsPage.html">About Us</a></li>
-				<li><a href="ContactPage.html">Contact Information</a></li>
-			</ul>
-		</nav>
-		<div class="wrapper-main">
-		<div class="text-container">
-		<div class="text">
-			<h1>front page</h1>
-		</div>
-		</div>
+		<div class="wrapper">
+			<nav>
+				<img src="../Images/logo.png" alt="potato logo">
+				<ul>
+					<li><b>Website Name Goes here</b></li>
+					<li><a href="HomePage.html">Home</a></li>
+					<li><a href="PotatoesPage.html">Varieties of Potatoes</a></li>
+					<li><a href="AboutUsPage.html">About Us</a></li>
+					<li><a href="ContactPage.html">Contact Information</a></li>
+				</ul>
+			</nav>
+			<div class="content-area">
+			<div class="sidebar">
+				<h1></h1>
+			</div>
+			<div class="main">
+				<h1>main text here</h1>
+			</div>
+			</div>
+			<div class="footer">
+				<ul>
+					<li>© 2024 company name goes here. All rights reserved.</li>
+					<li><a href="">Terms of Service</a></li>
+					<li> | </li>
+					<li><a href="">Privacy Policy</a></li>
+				</ul>
+			</div>
 		</div>
 	</body>
 </html>
