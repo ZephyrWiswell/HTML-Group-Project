@@ -45,6 +45,7 @@
 		.main {
 			flex: 1;
 			padding: 40px;
+			width: 600px;
 			background-color: #F5F5DC;
 		}
 		
@@ -90,6 +91,38 @@
 			padding-left: 20px;
 		}
 		
+		#sidebartxt {
+			font-size: 20px;
+		}
+		
+		#sidebarselected {
+			font-size: 25px;
+			font-weight: bold;
+		}
+		
+		.potato {
+			
+			justify-content: center;
+			align-items: center;
+			top: 50%;
+		}
+		
+		.potato img {
+			width: 200px;
+			height: 200px;
+		}
+		
+		#potatoText {
+			text-align: center;
+			
+		}
+		
+		.sidebar ul li a {
+			font-size: 20px;
+			color: darkslategray;
+			padding: 0 20px;
+		}
+		
 	</style>
 	<body>
 		<div class="wrapper">
@@ -105,10 +138,28 @@
 			</nav>
 			<div class="content-area">
 			<div class="sidebar">
-				<h1></h1>
+				<ul>
+					<li><a href="HomePage.html" id="sidebarselected">Home</a><br><br><br></li>
+					<li><a href="PotatoesPage.html" id="sidebartxt">Varieties of Potatoes</a><br><br><br></li>
+					<li><a href="AboutUsPage.html" id="sidebartxt">About Us</a><br><br><br></li>
+					<li><a href="ContactPage.html" id="sidebartxt">Contact Information</a><br><br><br></li>
+				</ul>
 			</div>
 			<div class="main">
-				<h1>main text here</h1>
+				<h1 id="welcome">main text here</h1><br>
+				<h3>Click a potato to learn more about it!</h3><br><br>
+				<div class="potato">
+					<a href="PotatoesPage.html#reveal-1" id="potatoText" alt="Baking Potato"><img src="../Images/BakingPotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-2" id="potatoText" alt="Yukon Gold Potato"><img src="../Images/YukonGoldPotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-3" id="potatoText" alt="Sweet Potato"><img src="../Images/SweetPotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-4" id="potatoText" alt="Russet Potato"><img src="../Images/RussetPotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-5" id="potatoText" alt="White Potato"><img src="../Images/WhitePotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-6" id="potatoText" alt="Russian Banana Potato"><img src="../Images/RussianBananaPotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-7" id="potatoText" alt="German Butterball Potato"><img src="../Images/GermanButterballPotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-8" id="potatoText" alt="Kennebec Potato"><img src="../Images/KennebecPotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-9" id="potatoText" alt="Purple Majesty Potato"><img src="../Images/PurpleMajestyPotato.jpg"></a>
+					<a href="PotatoesPage.html#reveal-10" id="potatoText" alt="Red Thumb Potato"><img src="../Images/RedThumbPotato.jpg"></a>
+				</div>
 			</div>
 			</div>
 			<div class="footer">
@@ -120,5 +171,23 @@
 				</ul>
 			</div>
 		</div>
+		
+			<script>
+	
+				const hours = new Date().getHours();
+				
+				const text = document.getElementById('welcome');
+				
+				if (hours < 12) {
+					text.textContent = "Good Morning!"
+				}
+				else if (hours < 18) {
+					text.textContent = "Good Afternoon!"
+				}
+				else {
+					text.textContent = "Good Evening!"
+				}
+			
+			</script>
 	</body>
 </html>
